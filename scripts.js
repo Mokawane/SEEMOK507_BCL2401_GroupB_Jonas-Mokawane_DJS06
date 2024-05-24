@@ -13,3 +13,16 @@ const products = [
   { product: 'coffee', price: 10 },
   { product: 'tea', price: '' },
 ]
+
+let eachName = 'Names:\n';
+names.forEach((name) => {
+eachName += name + '\n';
+return name;
+});
+console.log(eachName);
+
+let eachProvince = 'Provinces:\n';
+provinces.forEach ((province) => {
+eachProvince += province + '\n';
+});
+console.log(eachProvince);

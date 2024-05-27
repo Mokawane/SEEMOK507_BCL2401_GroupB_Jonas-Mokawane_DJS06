@@ -44,3 +44,8 @@ console.log('Sorted provinces:', sortedProvinces);
 const filteredProvinces = provinces.filter(province => !province.includes('Cape'));
 console.log('Remaining provinces:', filteredProvinces);
 console.log('Count of remaining provinces:', filteredProvinces.length);
+
+const nameWithS = names.map(name => {
+  return name.split('').some(char => char.toLowerCase() === 's');
+});
+console.log('Boolean array (contains "S"):', nameWithS);

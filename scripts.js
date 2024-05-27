@@ -55,3 +55,25 @@ const namesToProvinces = names.reduce((acc, name, index) => {
   return acc;
 }, {});
 console.log(namesToProvinces);
+
+console.log(products.filter(({ product }) => product.length <= 5));
+
+console.log(products
+  .filter(({ price }) => !isNaN(price) && price !== '' && price !== ' ')
+  .map(({ price }) => Number(price))
+  .reduce((total, price) => total + price, 0)
+);
+
+console.log(products.reduce((acc, { product }) => acc + product, ''));
+
+console.log(products.reduce((acc, { product }) => acc + product, ''));
+
+const validPrices = products.filter(({ price }) => !isNaN(price) && price !== '' && price !== ' ').map(({ price }) => Number(price));
+console.log(`Highest: ${Math.max(...validPrices)}. Lowest: ${Math.min(...validPrices)}.`);
+
+console.log(Object.entries(products).reduce((acc, [index, { product, price }]) => {
+  acc[index] = { name: product, cost: price };
+  return acc;
+}, {}));
+
+

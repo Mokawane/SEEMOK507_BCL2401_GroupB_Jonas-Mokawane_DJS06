@@ -49,3 +49,9 @@ const nameWithS = names.map(name => {
   return name.split('').some(char => char.toLowerCase() === 's');
 });
 console.log('Boolean array (contains "S"):', nameWithS);
+
+const namesToProvinces = names.reduce((acc, name, index) => {
+  acc[name] = provinces[index];
+  return acc;
+}, {});
+console.log(namesToProvinces);

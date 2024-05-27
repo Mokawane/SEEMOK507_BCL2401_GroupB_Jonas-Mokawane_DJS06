@@ -40,3 +40,7 @@ console.log(nameLength);
 
 const sortedProvinces = provinces.slice().sort();
 console.log('Sorted provinces:', sortedProvinces);
+
+const filteredProvinces = provinces.filter(province => !province.includes('Cape'));
+console.log('Remaining provinces:', filteredProvinces);
+console.log('Count of remaining provinces:', filteredProvinces.length);

@@ -37,3 +37,6 @@ console.log('provinces =',upperCaseProvinces);
 
 const nameLength = names.map(name => name.length);
 console.log(nameLength);
+
+const sortedProvinces = provinces.slice().sort();
+console.log('Sorted provinces:', sortedProvinces);

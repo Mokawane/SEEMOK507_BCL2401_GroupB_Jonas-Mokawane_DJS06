@@ -26,3 +26,11 @@ provinces.forEach ((province) => {
 eachProvince += province + '\n';
 });
 console.log(eachProvince);
+
+names.forEach((name, index) => {
+  const province = provinces[index];
+  console.log(`${name}`,` (${province})` + '\n')
+});
+
+const upperCaseProvinces = provinces.map(province => province.toUpperCase());
+console.log('provinces =',upperCaseProvinces);
